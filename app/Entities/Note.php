@@ -8,6 +8,7 @@ class Note extends Entity
         'id' => null,
         'text' => null,
         'user' => null,
+        'hashtags' => null,
     ];
 
     /**
