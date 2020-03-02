@@ -11,6 +11,10 @@ class Note extends Entity
         'hashtags' => null,
     ];
 
+    protected $casts = [
+        'hashtags' => 'json-array',
+    ];
+
     /**
      * Immutable content setter
      *
