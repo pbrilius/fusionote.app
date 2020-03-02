@@ -30,4 +30,18 @@ class User extends Entity
 
         return $object;
     }
+
+    /**
+     * Email immutability
+     *
+     * @param string $email
+     * @return void
+     */
+    public function setEmail(string $email)
+    {
+        $object = new User(get_object_vars($this));
+        $object->email = $email;
+
+        return $object;
+    }
 }
