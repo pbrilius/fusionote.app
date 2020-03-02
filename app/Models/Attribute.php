@@ -7,4 +7,7 @@ class Attribute extends Model
     protected $allowedFields = ['label', 'superiority'];
 
     protected $table = 'attributes';
+
+    protected $useTimestamps = false;
+
 }

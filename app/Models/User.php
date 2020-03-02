@@ -9,4 +9,6 @@ class User extends Model
     protected $table = 'user';
     
     protected $allowedFields = ['email', 'hash', 'roles', 'attributes'];
+
+    protected $useTimestamps = false;
 }

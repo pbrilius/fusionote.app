@@ -10,4 +10,7 @@ class Note extends Model
     protected $returnType = EntitiesNote::class;
 
     protected $allowedFields = ['text', 'user'];
+
+    protected $useTimestamps = true;
+
 }
