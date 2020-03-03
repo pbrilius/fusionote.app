@@ -12,6 +12,11 @@ class User extends Model
 
     protected $useTimestamps = false;
 
+    /**
+     * Password hash callback
+     *
+     * @return void
+     */
     public function hashPassword()
     {
         if (!isset($data['data']['hash'])) {
@@ -22,4 +27,7 @@ class User extends Model
 
         return $data;
     }
+
+    protected $beforeInsert = ['hashPassword'];
+    protected $beforeUpdate = ['hashPassword'];
 }
