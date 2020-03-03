@@ -11,4 +11,15 @@ class User extends Model
     protected $allowedFields = ['email', 'hash', 'roles', 'attributes'];
 
     protected $useTimestamps = false;
+
+    public function hashPassword()
+    {
+        if (!isset($data['data']['hash'])) {
+            return $data;
+        }
+
+        $data['data']['hash'] = password_hash($data['data']['hash'], PASSWORD_DEFAULT);
+
+        return $data;
+    }
 }
